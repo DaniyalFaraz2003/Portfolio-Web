@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { Github, Zap } from "lucide-react";
+import { Github, Zap, Linkedin } from "lucide-react";
 import { Frame } from "@/components/ui/frame";
 import { Button } from "@/components/ui/button";
 import { Outlet, Link } from "react-router";
@@ -115,22 +115,25 @@ function App() {
                   )}
                 />
                 <div className="flex items-center -mt-3.5">
-                  <Button
-                    shape="flat"
-                    className="font-normal px-9 py-[0.45rem] text-xs text-foreground [--color-frame-1-stroke:var(--color-primary)]/50 [--color-frame-1-fill:var(--color-primary)]/8"
-                  >
-                    <div className="me-10">Search Docs…</div>
-                    <div className="ms-auto">⌘+k</div>
-                  </Button>
                   <a
                     target="_blank"
                     href="https://github.com/rizkimuhammada/cosmic-ui"
                   >
                     <Button
-                      shape="flat"
-                      className="py-[0.45rem] px-6 ms-1 text-foreground [--color-frame-1-stroke:var(--color-accent)]/50 [--color-frame-1-fill:var(--color-accent)]/20"
-                    >
-                      <Github className="size-4 stroke-[1.2]" />
+                    shape="flat"
+                    className="font-normal px-9 py-[0.45rem] text-xs text-foreground [--color-frame-1-stroke:var(--color-primary)]/50 [--color-frame-1-fill:var(--color-primary)]/8"
+                  >
+                    <Linkedin className="size-4 stroke-[1.2]" />
+                  </Button>
+                  </a>
+                  {/* LinkedIn Button */}
+                  <a
+                    target="_blank"
+                    href="https://linkedin.com/in/yourusername"
+                    rel="noopener noreferrer"
+                  >
+                    <Button shape="flat" className="py-[0.45rem] px-6 ms-1 text-foreground [--color-frame-1-stroke:var(--color-accent)]/50 [--color-frame-1-fill:var(--color-accent)]/20" aria-label="LinkedIn">
+                    <Github className="size-4 stroke-[1.2]" />
                     </Button>
                   </a>
                 </div>
