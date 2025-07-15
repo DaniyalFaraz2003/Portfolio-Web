@@ -13,6 +13,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Chart, getColor } from "@/components/ui/chart";
 import { FilePenLine, CopySlash } from "lucide-react";
+import { TabsRoot, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import avatar from "@/assets/images/temper.svg";
 
 function Main() {
@@ -164,6 +165,137 @@ function Main() {
         </div>
       </div>
       {/* ABOUT SECTION END */}
+
+      {/* SKILLS SECTION START */}
+      <div className="w-[80%] justify-self-center flex flex-col items-center mb-20">
+        <div
+          className={twMerge([
+            "w-full", // full width
+            "h-auto relative backdrop-blur-xl",
+            "[--color-frame-1-stroke:var(--color-primary)]/50",
+            "[--color-frame-1-fill:var(--color-primary)]/20",
+            "[--color-frame-2-stroke:var(--color-accent)]",
+            "[--color-frame-2-fill:var(--color-accent)]/20",
+            "[--color-frame-3-stroke:var(--color-accent)]",
+            "[--color-frame-3-fill:var(--color-accent)]/20",
+            "[--color-frame-4-stroke:var(--color-accent)]",
+            "[--color-frame-4-fill:var(--color-accent)]/20",
+            "[--color-frame-5-stroke:var(--color-accent)]",
+            "[--color-frame-5-fill:var(--color-accent)]/20",
+            "[--color-frame-6-stroke:var(--color-accent)]",
+            "[--color-frame-6-fill:var(--color-accent)]/20",
+            "[--color-frame-7-stroke:var(--color-accent)]",
+            "[--color-frame-7-fill:var(--color-accent)]/20",
+            "[--color-frame-8-stroke:var(--color-primary)]/23",
+            "[--color-frame-8-fill:transparent]",
+          ])}
+        >
+          <Frame
+            className="drop-shadow-2xl drop-shadow-primary/50 "
+            paths={JSON.parse(
+              '[{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-1-stroke)","fill":"var(--color-frame-1-fill)"},"path":[["M","29","30"],["L","50% - 10","30"],["L","50% + 9","0% + 11.5"],["L","100% - 105","0% + 11.5"],["L","100% - 114","31"],["L","100% - 85","12"],["L","100% - 29","12"],["L","100% - 11","30"],["L","100% - 11","100% - 47"],["L","100% - 28","100% - 28"],["L","50% + 8.5","100% - 28"],["L","50% - 7.5","100% - 12"],["L","0% + 82","100% - 12"],["L","0% + 86","100% - 27"],["L","0% + 61","100% - 12"],["L","27","100% - 12"],["L","10","100% - 29"],["L","11","47"],["L","29","30"]]},{"show":true,"style":{"strokeWidth":"1","stroke":"var(--color-frame-2-stroke)","fill":"var(--color-frame-2-fill)"},"path":[["M","0% + 40","19"],["L","50% - 42","19"],["L","50% - 46","0% + 24.5"],["L","0% + 34","0% + 24.5"],["L","0% + 40","19"]]},{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-3-stroke)","fill":"var(--color-frame-3-fill)"},"path":[["M","50% - 34.5","18"],["L","50% - 25","18"],["L","50% - 31","0% + 24.5"],["L","50% - 39.5","0% + 24.5"],["L","50% - 34.5","18"]]},{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-4-stroke)","fill":"var(--color-frame-4-fill)"},"path":[["M","50% - 16.5","16"],["L","50% - 4","16"],["L","50% - 12","0% + 24.5"],["L","50% - 24.5","0% + 24.5"],["L","50% - 16.5","16"]]},{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-5-stroke)","fill":"var(--color-frame-5-fill)"},"path":[["M","50% + 13.5","100% - 22"],["L","50% + 25","100% - 22"],["L","50% + 17","100% - 13"],["L","50% + 4.5","100% - 12.5"],["L","50% + 13.5","100% - 22"]]},{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-6-stroke)","fill":"var(--color-frame-6-fill)"},"path":[["M","50% + 30.5","100% - 22"],["L","50% + 40","100% - 22"],["L","50% + 34","100% - 14.5"],["L","50% + 24.5","100% - 14.5"],["L","50% + 30.5","100% - 21"]]},{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-7-stroke)","fill":"var(--color-frame-7-fill)"},"path":[["M","50% + 45.5","100% - 22"],["L","100% - 32.5","100% - 22"],["L","100% - 38.5","100% - 16.5"],["L","50% + 40.5","100% - 16.5"],["L","50% + 45.5","100% - 22"]]},{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-8-stroke)","fill":"var(--color-frame-8-fill)"},"path":[["M","35","10"],["L","50% - 4","10"],["L","50% + 8","0% + 0"],["L","100% - 97","0% + 0"],["L","100% - 109","37"],["L","100% - 83","0"],["L","100% - 22","0"],["L","100% + 0","22"],["L","100% + 0","100% - 42"],["L","100% - 35","100% - 6"],["L","50% + 1.5","100% - 6"],["L","50% - 6.5","100% + 0"],["L","0% + 73.00000000000001","100% + 0"],["L","0% + 85","100% - 32"],["L","0% + 55","100% + 0"],["L","26","100% + 0"],["L","0","100% - 27"],["L","0","43"],["L","35","10"]]}]'
+            )}
+          />
+          <div className="relative px-12 py-14 flex flex-col">
+            <div className="text-3xl text-shadow-lg text-shadow-primary font-medium mb-2">
+              Skills & Tech Stack
+            </div>
+            <div className="opacity-70 mb-4 max-w-2xl mx-auto text-center text-lg">
+              Here are the technologies and tools I use to build modern web applications. Explore by category!
+            </div>
+            <TabsRoot defaultValue="languages">
+              <TabsList className="mb-6">
+                <TabsTrigger value="languages">Languages</TabsTrigger>
+                <TabsTrigger value="frameworks">Frameworks</TabsTrigger>
+                <TabsTrigger value="tools">Tools</TabsTrigger>
+                <TabsTrigger value="cloud">Cloud</TabsTrigger>
+              </TabsList>
+              <TabsContent value="languages">
+                <div className="flex flex-wrap gap-3 justify-center">
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 256 256"><path fill="#f7df1e" d="M0 0h256v256H0z"/><path d="M67.2 213.7l16.2-9.8c3.1 5.5 5.9 10.2 12.7 10.2 6.5 0 10.6-2.5 10.6-12V116h20.1v86.2c0 20.8-12.2 30.2-30 30.2-16.1 0-25.5-8.3-30.4-18.7m70.7-2.1l16.2-9.4c4.2 6.9 9.7 12 19.4 12 8.2 0 13.4-4.1 13.4-9.8 0-6.8-5.4-9.2-14.5-13.2l-5-2.1c-14.4-6.1-24-13.8-24-30 0-14.9 11.4-26.2 29.2-26.2 12.7 0 21.8 4.4 28.3 15.9l-15.5 10c-3.4-6.1-7.1-8.5-12.8-8.5-5.8 0-9.5 3.7-9.5 8.5 0 6 3.7 8.4 12.2 12.1l5 2.1c17 7.3 26.6 14.7 26.6 31.4 0 18-14.2 27.8-33.3 27.8-18.7 0-30.8-8.9-36.7-20.5"/></svg>
+                    JavaScript
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 256 256"><path fill="#3178c6" d="M0 0h256v256H0z"/><path fill="#fff" d="M128 36.6l-90.5 52.3v104.2l90.5 52.3 90.5-52.3V88.9zm0 13.8l77.5 44.8v89.6l-77.5 44.8-77.5-44.8V95.2zm-7.2 32.2h14.4v14.4h-14.4zm0 28.8h14.4v14.4h-14.4zm0 28.8h14.4v14.4h-14.4zm0 28.8h14.4v14.4h-14.4z"/></svg>
+                    TypeScript
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#e34f26" d="M1.5 0h21l-1.91 21.6L12 24l-8.59-2.4z"/><path fill="#fff" d="M12 21.1l7.16-2.01L20.09 2H3.91l.93 17.09z"/><path fill="#ebebeb" d="M12 17.6l-3.16-.87-.21-2.36h-2.1l.41 4.6 5.06 1.41z"/><path fill="#fff" d="M12 17.6l3.16-.87.21-2.36h2.1l-.41 4.6-5.06 1.41z"/></svg>
+                    HTML/CSS
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#61dafb" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><circle cx="12" cy="12" r="5" fill="#fff"/></svg>
+                    React
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#339933" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                    Node.js
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-blue-500">C++</span>
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-yellow-600">Python</span>
+                  </Button>
+                </div>
+              </TabsContent>
+              <TabsContent value="frameworks">
+                <div className="flex flex-wrap gap-3 justify-center">
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-sky-500">Next.js</span>
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-green-600">Express</span>
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-indigo-500">Redux</span>
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-cyan-500">Tailwind CSS</span>
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-orange-500">Firebase</span>
+                  </Button>
+                </div>
+              </TabsContent>
+              <TabsContent value="tools">
+                <div className="flex flex-wrap gap-3 justify-center">
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-gray-700">Git</span>
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-purple-500">VS Code</span>
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-blue-400">Postman</span>
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-yellow-500">Figma</span>
+                  </Button>
+                </div>
+              </TabsContent>
+              <TabsContent value="cloud">
+                <div className="flex flex-wrap gap-3 justify-center">
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-blue-700">Azure</span>
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-orange-600">AWS</span>
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-blue-400">Vercel</span>
+                  </Button>
+                  <Button shape="simple" className="px-4 py-1 text-sm flex items-center gap-2">
+                    <span className="font-bold text-green-500">Netlify</span>
+                  </Button>
+                </div>
+              </TabsContent>
+            </TabsRoot>
+          </div>
+        </div>
+      </div>
+      {/* SKILLS SECTION END */}
       <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-7 w-full mt-44 px-5 2xl:px-0">
         <div
           className={twMerge([
