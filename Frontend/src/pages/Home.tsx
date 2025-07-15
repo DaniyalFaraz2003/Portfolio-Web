@@ -13,29 +13,51 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Chart, getColor } from "@/components/ui/chart";
 import { FilePenLine, CopySlash } from "lucide-react";
+import avatar from "@/assets/images/temper.svg";
 
 function Main() {
   return (
     <>
-      <div className="flex flex-col items-center mt-50 gap-6">
-        <div className="text-2xl md:text-3xl font-bold text-shadow-lg text-shadow-primary typing-container max-w-80 sm:max-w-none">
-          <p className="typing-text">Ready-to-use Sci-Fi UI components</p>
+      {/* HERO SECTION START */}
+      <div className="flex flex-col items-center mt-36 gap-6">
+        {/* Avatar with sci-fi border */}
+        <div className="relative mb-4">
+          <div className="w-36 h-36 rounded-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-primary/30 to-accent/20">
+            <Frame
+              className="absolute inset-0 z-10"
+              paths={JSON.parse('[{"show":true,"style":{"strokeWidth":"2","stroke":"var(--color-primary)","fill":"none"},"path":[["M","50","2"],["A","48","48","0","1","1","49.99","2"]]}]')}
+              enableViewBox={true}
+              viewBox="0 0 100 100"
+            />
+            <img
+              src={avatar}
+              alt="Daniyal Avatar"
+              className="w-32 h-32 object-cover rounded-full z-0"
+            />
+          </div>
         </div>
-        <div className="text-base md:text-lg max-w-5xl text-center opacity-70">
-          A curated set of futuristic UI components — reusable, customizable,
-          and framework-friendly.
+        {/* Headline */}
+        <div className="text-3xl md:text-5xl font-bold text-shadow-lg text-shadow-primary text-center max-w-2xl">
+          Hi, I'm Daniyal - Full Stack Developer
         </div>
-        <div className="flex flex-col sm:flex-row gap-6 sm:gap-3 mt-10">
-          <Link to="/docs">
-            <Button className="w-64 sm:w-56">Get Started</Button>
-          </Link>
-          <Link to="/docs/frame">
-            <Button variant="accent" className="w-64 sm:w-56">
-              Browse Components
-            </Button>
-          </Link>
+        {/* Subheading */}
+        <div className="text-base md:text-xl max-w-2xl text-center opacity-80">
+          Building modern, scalable web apps with a sci-fi touch. Passionate about React, Node, and cloud tech.
+        </div>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-3 mt-8">
+          <a href="/resume.pdf" download>
+            <Button className="w-64 sm:w-56">Download Resume</Button>
+          </a>
+          <a href="#contact">
+            <Button variant="accent" className="w-64 sm:w-56">Contact Me</Button>
+          </a>
+          <a href="#projects">
+            <Button variant="secondary" className="w-64 sm:w-56">View Work</Button>
+          </a>
         </div>
       </div>
+      {/* HERO SECTION END */}
       <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-7 w-full mt-44 px-5 2xl:px-0">
         <div
           className={twMerge([
