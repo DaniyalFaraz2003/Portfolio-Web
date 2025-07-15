@@ -58,6 +58,112 @@ function Main() {
         </div>
       </div>
       {/* HERO SECTION END */}
+      {/* ABOUT SECTION START */}
+      <div className="w-[80%] justify-self-center flex flex-col items-center mb-20 mt-20">
+        <div
+          className={twMerge([
+            "w-full", // full width
+            "h-95 relative backdrop-blur-xl",
+            "[--color-frame-1-stroke:var(--color-primary)]/50",
+            "[--color-frame-1-fill:var(--color-primary)]/20",
+            "[--color-frame-2-stroke:var(--color-accent)]",
+            "[--color-frame-2-fill:var(--color-accent)]/20",
+            "[--color-frame-3-stroke:var(--color-accent)]",
+            "[--color-frame-3-fill:var(--color-accent)]/20",
+            "[--color-frame-4-stroke:var(--color-accent)]",
+            "[--color-frame-4-fill:var(--color-accent)]/20",
+            "[--color-frame-5-stroke:var(--color-accent)]",
+            "[--color-frame-5-fill:var(--color-accent)]/20",
+            "[--color-frame-6-stroke:var(--color-accent)]",
+            "[--color-frame-6-fill:var(--color-accent)]/20",
+            "[--color-frame-7-stroke:var(--color-accent)]",
+            "[--color-frame-7-fill:var(--color-accent)]/20",
+            "[--color-frame-8-stroke:var(--color-primary)]/23",
+            "[--color-frame-8-fill:transparent]",
+          ])}
+        >
+          <Frame
+            className="drop-shadow-2xl drop-shadow-primary/50 "
+            paths={JSON.parse(
+              '[{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-1-stroke)","fill":"var(--color-frame-1-fill)"},"path":[["M","29","30"],["L","50% - 10","30"],["L","50% + 9","0% + 11.5"],["L","100% - 105","0% + 11.5"],["L","100% - 114","31"],["L","100% - 85","12"],["L","100% - 29","12"],["L","100% - 11","30"],["L","100% - 11","100% - 47"],["L","100% - 28","100% - 28"],["L","50% + 8.5","100% - 28"],["L","50% - 7.5","100% - 12"],["L","0% + 82","100% - 12"],["L","0% + 86","100% - 27"],["L","0% + 61","100% - 12"],["L","27","100% - 12"],["L","10","100% - 29"],["L","11","47"],["L","29","30"]]},{"show":true,"style":{"strokeWidth":"1","stroke":"var(--color-frame-2-stroke)","fill":"var(--color-frame-2-fill)"},"path":[["M","0% + 40","19"],["L","50% - 42","19"],["L","50% - 46","0% + 24.5"],["L","0% + 34","0% + 24.5"],["L","0% + 40","19"]]},{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-3-stroke)","fill":"var(--color-frame-3-fill)"},"path":[["M","50% - 34.5","18"],["L","50% - 25","18"],["L","50% - 31","0% + 24.5"],["L","50% - 39.5","0% + 24.5"],["L","50% - 34.5","18"]]},{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-4-stroke)","fill":"var(--color-frame-4-fill)"},"path":[["M","50% - 16.5","16"],["L","50% - 4","16"],["L","50% - 12","0% + 24.5"],["L","50% - 24.5","0% + 24.5"],["L","50% - 16.5","16"]]},{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-5-stroke)","fill":"var(--color-frame-5-fill)"},"path":[["M","50% + 13.5","100% - 22"],["L","50% + 25","100% - 22"],["L","50% + 17","100% - 13"],["L","50% + 4.5","100% - 12.5"],["L","50% + 13.5","100% - 22"]]},{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-6-stroke)","fill":"var(--color-frame-6-fill)"},"path":[["M","50% + 30.5","100% - 22"],["L","50% + 40","100% - 22"],["L","50% + 34","100% - 14.5"],["L","50% + 24.5","100% - 14.5"],["L","50% + 30.5","100% - 21"]]},{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-7-stroke)","fill":"var(--color-frame-7-fill)"},"path":[["M","50% + 45.5","100% - 22"],["L","100% - 32.5","100% - 22"],["L","100% - 38.5","100% - 16.5"],["L","50% + 40.5","100% - 16.5"],["L","50% + 45.5","100% - 22"]]},{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-8-stroke)","fill":"var(--color-frame-8-fill)"},"path":[["M","35","10"],["L","50% - 4","10"],["L","50% + 8","0% + 0"],["L","100% - 97","0% + 0"],["L","100% - 109","37"],["L","100% - 83","0"],["L","100% - 22","0"],["L","100% + 0","22"],["L","100% + 0","100% - 42"],["L","100% - 35","100% - 6"],["L","50% + 1.5","100% - 6"],["L","50% - 6.5","100% + 0"],["L","0% + 73.00000000000001","100% + 0"],["L","0% + 85","100% - 32"],["L","0% + 55","100% + 0"],["L","26","100% + 0"],["L","0","100% - 27"],["L","0","43"],["L","35","10"]]}]'
+            )}
+          />
+          <div className="relative px-12 py-14 flex flex-col">
+            <div className="text-3xl text-shadow-lg text-shadow-primary font-medium mb-2">
+              About Me
+            </div>
+            <div className="opacity-70 mb-4 max-w-2xl mx-auto text-center text-lg">
+              I am a passionate developer who loves building futuristic, scalable web applications. My journey started with curiosity and has grown into a mission to create impactful digital experiences. Here is a quick timeline of my growth and key milestones so far.
+            </div>
+            <div className="w-full h-40 pb-10"> {/* Added pb-8 for padding below the chart */}
+              <Chart
+                config={{
+                  type: "line",
+                  data: {
+                    labels: [
+                      "2018", "2019", "2020", "2021", "2022", "2023", "2024"
+                    ],
+                    datasets: [
+                      Object.assign({
+                        label: "Growth Timeline",
+                        data: [1, 2, 4, 8, 16, 32, 64],
+                        backgroundColor: () => getColor("--color-primary", 0.3),
+                        borderColor: () => getColor("--color-primary"),
+                        borderWidth: 1,
+                        pointRadius: 4, // smaller circles
+                        pointHoverRadius: 6, // smaller on hover
+                      }, {
+                        _descriptions: [
+                          "Started my coding journey.",
+                          "Built my first website.",
+                          "Learned React and Node.js.",
+                          "Landed my first internship.",
+                          "Worked on real-world SaaS projects.",
+                          "Became a full stack developer.",
+                          "Building futuristic UIs and mentoring others."
+                        ]
+                      })
+                    ]
+                  },
+                  options: {
+                    maintainAspectRatio: false,
+                    plugins: {
+                      legend: {
+                        display: false,
+                      },
+                      tooltip: {
+                        enabled: true,
+                        displayColors: false, // Remove the square marker
+                        callbacks: {
+                          title: function(context) {
+                            return context[0].label;
+                          },
+                          label: function(context) {
+                            const ds = context.dataset as any;
+                            const idx = context.dataIndex;
+                            return ds._descriptions ? ds._descriptions[idx] : '';
+                          }
+                        }
+                      }
+                    },
+                    scales: {
+                      x: {
+                        display: true,
+                      },
+                      y: {
+                        display: false,
+                        min: -10,
+                        max: 70
+                      },
+                    },
+                  },
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* ABOUT SECTION END */}
       <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-7 w-full mt-44 px-5 2xl:px-0">
         <div
           className={twMerge([
@@ -1023,6 +1129,7 @@ function Main() {
       <div className="lg:hidden">
         <Menu />
       </div>
+      
     </>
   );
 }
