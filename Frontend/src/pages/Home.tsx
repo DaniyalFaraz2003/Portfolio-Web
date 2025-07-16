@@ -264,7 +264,7 @@ function Main() {
         </div>
         <div
           className={twMerge([
-            "h-95 relative backdrop-blur-xl sm:-mt-8",
+            "relative backdrop-blur-xl sm:-mt-8",
             "[--color-frame-1-stroke:var(--color-primary)]/50",
             "[--color-frame-1-fill:var(--color-primary)]/20",
             "[--color-frame-2-stroke:var(--color-accent)]",
