@@ -12,6 +12,7 @@
   "dependencies": {
     "@left4code/svg-renderer": "^1.0.3",
     "@tailwindcss/vite": "^4.1.11",
+    "@zag-js/accordion": "^1.18.3",
     "@zag-js/menu": "^1.18.3",
     "@zag-js/react": "^1.18.3",
     "@zag-js/tabs": "^1.18.3",
