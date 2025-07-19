@@ -54,9 +54,9 @@ function Main() {
           <a href="#contact">
             <Button variant="accent" className="w-64 sm:w-56">Contact Me</Button>
           </a>
-          <a href="/projects">
+          <Link to={"/projects"}>
             <Button variant="secondary" className="w-64 sm:w-56">View Work</Button>
-          </a>
+          </Link>
         </div>
       </div>
       {/* HERO SECTION END */}
