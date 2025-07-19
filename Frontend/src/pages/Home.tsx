@@ -54,7 +54,7 @@ function Main() {
           <a href="#contact">
             <Button variant="accent" className="w-64 sm:w-56">Contact Me</Button>
           </a>
-          <a href="#projects">
+          <a href="/projects">
             <Button variant="secondary" className="w-64 sm:w-56">View Work</Button>
           </a>
         </div>
@@ -62,7 +62,7 @@ function Main() {
       {/* HERO SECTION END */}
 
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-7 w-full mt-44 px-5 2xl:px-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2  gap-7 w-full mt-44 px-5 2xl:px-0">
         <div
           className={twMerge([
             "h-95 relative backdrop-blur-xl sm:mt-5",
