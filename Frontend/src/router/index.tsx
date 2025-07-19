@@ -1,6 +1,7 @@
 import { useRoutes } from "react-router";
 import App from "../App.tsx";
 import Home from "../pages/Home.tsx";
+import Projects from "../pages/Projects.tsx";
 import Docs from "../pages/Docs.tsx";
 import Components from "../pages/Components.tsx";
 import Colors from "../pages/Colors.tsx";
@@ -14,6 +15,10 @@ function Router() {
         {
           index: true,
           element: <Home />,
+        },
+        {
+          path: "projects",
+          element: <Projects />,
         },
         {
           path: "docs",

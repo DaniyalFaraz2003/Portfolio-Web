@@ -15,6 +15,7 @@ import { Chart, getColor } from "@/components/ui/chart";
 import { FilePenLine, CopySlash } from "lucide-react";
 import { TabsRoot, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import avatar from "@/assets/images/temper.svg";
+import { AccordionRoot, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 function Main() {
   return (
@@ -53,15 +54,15 @@ function Main() {
           <a href="#contact">
             <Button variant="accent" className="w-64 sm:w-56">Contact Me</Button>
           </a>
-          <a href="#projects">
+          <Link to={"/projects"}>
             <Button variant="secondary" className="w-64 sm:w-56">View Work</Button>
-          </a>
+          </Link>
         </div>
       </div>
       {/* HERO SECTION END */}
 
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-7 w-full mt-44 px-5 2xl:px-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2  gap-7 w-full mt-44 px-5 2xl:px-0">
         <div
           className={twMerge([
             "h-95 relative backdrop-blur-xl sm:mt-5",
@@ -263,7 +264,7 @@ function Main() {
         </div>
         <div
           className={twMerge([
-            "h-95 relative backdrop-blur-xl sm:-mt-8",
+            "relative backdrop-blur-xl sm:-mt-8",
             "[--color-frame-1-stroke:var(--color-primary)]/50",
             "[--color-frame-1-fill:var(--color-primary)]/20",
             "[--color-frame-2-stroke:var(--color-accent)]",
@@ -283,76 +284,53 @@ function Main() {
             )}
           />
           <div className="relative px-12 py-14 flex flex-col items-center">
-            <div className="text-2xl text-shadow-lg text-shadow-primary font-bold">
-              Move Goal
+            <div className="text-2xl text-shadow-lg text-shadow-primary font-bold mb-4">
+              Certifications
             </div>
-            <div className="opacity-70 mt-2">Set your daily activity goal.</div>
-            <div className="flex items-center gap-5 mt-7">
-              <Button shape="flat" className="py-0 px-5 text-lg">
-                -
-              </Button>
-              <div className="flex flex-col items-center justify-center">
-                <div className="text-3xl text-shadow-lg text-shadow-primary font-medium">
-                  2,100
-                </div>
-                <div className="opacity-70 mt-1">CALORIES/DAY</div>
-              </div>
-              <Button shape="flat" className="py-0 px-5 text-lg">
-                +
-              </Button>
+            <div className="opacity-70 mb-6 text-center max-w-xl">
+              Here are some of my key certifications. Click to view details.
             </div>
-            <div className="w-full h-25 mt-5">
-              <Chart
-                config={{
-                  type: "bar",
-                  data: {
-                    labels: [
-                      "Jan",
-                      "Feb",
-                      "Mar",
-                      "Apr",
-                      "May",
-                      "Jun",
-                      "Jul",
-                      "Aug",
-                      "Sep",
-                      "Oct",
-                      "Nov",
-                      "Dec",
-                    ],
-                    datasets: [
-                      {
-                        label: "Html Template",
-                        maxBarThickness: 12,
-                        data: [
-                          60, 150, 30, 200, 180, 50, 180, 120, 230, 180, 250,
-                          270,
-                        ],
-                        backgroundColor: () => getColor("--color-primary", 0.3),
-                        borderColor: () => getColor("--color-primary"),
-                        borderWidth: 1,
-                      },
-                    ],
-                  },
-                  options: {
-                    maintainAspectRatio: false,
-                    plugins: {
-                      legend: {
-                        display: false,
-                      },
-                    },
-                    scales: {
-                      x: {
-                        display: false,
-                      },
-                      y: {
-                        display: false,
-                      },
-                    },
-                  },
-                }}
-              />
-            </div>
+            <AccordionRoot className="w-full max-w-xl mx-auto">
+              <AccordionItem value="aws-cert">
+                <AccordionTrigger>AWS Certified Solutions Architect</AccordionTrigger>
+                <AccordionContent>
+                  <div className="flex flex-col sm:flex-row items-center gap-4">
+                    <img src="/certs/aws.png" alt="AWS Certification" className="w-24 h-24 object-contain rounded" />
+                    <div>
+                      <div className="font-semibold">Issued: Jan 2023</div>
+                      <div className="opacity-80">Amazon Web Services (AWS)</div>
+                      <a href="https://www.credly.com/badges/aws-cert" target="_blank" rel="noopener noreferrer" className="text-[--color-primary] underline">View Credential</a>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="meta-cert">
+                <AccordionTrigger>Meta Front-End Developer</AccordionTrigger>
+                <AccordionContent>
+                  <div className="flex flex-col sm:flex-row items-center gap-4">
+                    <img src="/certs/meta.png" alt="Meta Certification" className="w-24 h-24 object-contain rounded" />
+                    <div>
+                      <div className="font-semibold">Issued: Aug 2022</div>
+                      <div className="opacity-80">Meta (Facebook)</div>
+                      <a href="https://www.credly.com/badges/meta-cert" target="_blank" rel="noopener noreferrer" className="text-[--color-primary] underline">View Credential</a>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="google-cert">
+                <AccordionTrigger>Google IT Support Professional</AccordionTrigger>
+                <AccordionContent>
+                  <div className="flex flex-col sm:flex-row items-center gap-4">
+                    <img src="/certs/google.png" alt="Google Certification" className="w-24 h-24 object-contain rounded" />
+                    <div>
+                      <div className="font-semibold">Issued: May 2021</div>
+                      <div className="opacity-80">Google</div>
+                      <a href="https://www.credly.com/badges/google-cert" target="_blank" rel="noopener noreferrer" className="text-[--color-primary] underline">View Credential</a>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </AccordionRoot>
           </div>
         </div>
       </div>
